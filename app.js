@@ -98,7 +98,7 @@ function fiveDayForcast(searchVal){
         column.classList.add("col-md-2")
         
         var card = document.createElement("div")
-        card.classList.add("card","bg-primary", "text-white" )
+        card.classList.add("card","bg-info", "text-white" )
 
         var cardBody = document.createElement("div")
         cardBody.classList.add("card-body")
