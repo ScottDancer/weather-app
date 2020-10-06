@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header class="container-fluid text-center bg-dark text-white">
+      <h1>Weather Dashboard</h1>
+    </header>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md-3 bg-light">
+          <h5>Search for a City:</h5>
+          <div class="form-inline form-group">
+            <input type="text" id="searchInput" class="form-control" />
+            <button class="btn btn-primary" id="search-btn">
+              <i class="fa fa-search"></i>
+            </button>
+          </div>
+          <ul class="list-group" id="old-searches"></ul>
+        </aside>
+        <div class="col-md-9">
+          <div id="forcast"></div>
+          <div id="five-day-forcast"></div>
+        </div> 
+
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
