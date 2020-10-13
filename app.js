@@ -32,7 +32,7 @@ function saveSearch(searchVal){
 
 
 function getWeather(searchVal){
-  fetch(`http://api.openweathermap.org/data/2.5/weather?q=${searchVal}&appid=${apiKey}&units=imperial`)
+  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${searchVal}&appid=${apiKey}&units=imperial`)
     .then(function(response){
       return response.json()
     })
@@ -61,7 +61,7 @@ function getWeather(searchVal){
       cardBody.classList.add("card-body","getsUV")
 
       var image = document.createElement("img")
-      image.setAttribute("src", "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png")
+      image.setAttribute("src", "https://openweathermap.org/img/w/" + data.weather[0].icon + ".png")
 
       title.appendChild(image)
       cardBody.appendChild(title)
@@ -80,7 +80,7 @@ function getWeather(searchVal){
 }
 
 function fiveDayForcast(searchVal){
-  fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${searchVal}&appid=${apiKey}&units=imperial`)
+  fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${searchVal}&appid=${apiKey}&units=imperial`)
     .then(function(response){
       return response.json()
     })
@@ -108,7 +108,7 @@ function fiveDayForcast(searchVal){
         cardTitle.textContent = new Date(data.list[i].dt_txt).toLocaleDateString()
 
         var image = document.createElement("img")
-        image.setAttribute("src", "http://openweathermap.org/img/w/" + data.list[i].weather[0].icon + ".png")
+        image.setAttribute("src", "https://openweathermap.org/img/w/" + data.list[i].weather[0].icon + ".png")
 
         var humidity = document.createElement("p")
         humidity.classList.add("card-text")
@@ -134,7 +134,7 @@ function fiveDayForcast(searchVal){
   }
 
   function getUVIndex(lat, lon){
-    fetch(`http://api.openweathermap.org/data/2.5/uvi?appid=${apiKey}&lat=${lat}&lon=${lon}`)
+    fetch(`https://api.openweathermap.org/data/2.5/uvi?appid=${apiKey}&lat=${lat}&lon=${lon}`)
     .then(function(response){
       return response.json()
     })
